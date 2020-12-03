@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Road Tag</string>
+    <string-array name="array_empresas">
+        <item>"Empresa 1"</item>
+        <item>"Empresa 2"</item>
+        <item>"Empresa 3"</item>
+        <item>"Empresa 4"</item>
+    </string-array>
+    <string-array name="array_vehiculos">
+        <item>"Tipo 1"</item>
+        <item>"Tipo 2"</item>
+        <item>"Tipo 3"</item>
+        <item>"Tipo 4"</item>
+    </string-array>
+    <string name="title_activity_visualizar_bahias">Map</string>
+    <string-array name="mis_vehiculos">
+        <item>"Mi vehiculo 1"</item>
+        <item>"Mi vehiculo 2"</item>
+        <item>"Mi vehiculo 3"</item>
+        <item>"Mi vehiculo 4"</item>
+    </string-array>
+</resources>

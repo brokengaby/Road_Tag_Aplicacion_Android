@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReservacionBahias"
+    android:background="@drawable/fondo_degradado">
+
+    <LinearLayout
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#fff"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Bahía Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/teal_200"
+                android:textSize="15sp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Próximas reservaciones"
+                />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="#fff"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/teal_200"
+            android:textSize="15sp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Reservar"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:text="fecha"
+                />
+
+            <EditText
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:hint="dd/mm/yyyy"
+                android:textColorHint="#fff"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:inputType="date"
+                android:id="@+id/etextFechaReserva"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="17sp"
+                android:textAlignment="center"
+                android:text="Inicio"
+                android:inputType="date"
+                />
+
+            <EditText
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:hint="HH:m"
+                android:textColorHint="#fff"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:inputType="time"
+                android:textSize="15sp"
+                android:id="@+id/etextInicioReserva"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:text="fin"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="17sp" />
+
+            <EditText
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:hint="HH:m"
+                android:textColorHint="#fff"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:inputType="time"
+                android:textSize="15sp"
+                android:id="@+id/etextFinReserva"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="17sp"
+                android:text="Vehículo"
+                android:textAlignment="center"
+                android:inputType="textPersonName"
+                />
+
+            <Spinner
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/mis_vehiculos"
+                android:background="#fff"
+                android:layout_marginLeft="20dp"
+                />
+
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:id="@+id/btnConfirmarReserva"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/teal_200"
+                android:text="Confirmar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.965"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Al confirmar se compronbará la disonibilidad y se le hará responsable porque el vehículo use en condicones el espacio de la bahía en el tiempo y fecha especificados."
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/btnConfirmarReserva"
+                app:layout_constraintEnd_toStartOf="@+id/btnConfirmarReserva"
+                app:layout_constraintHorizontal_bias="0.842"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnConfirmarReserva" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnSalirVehiculo"
+                android:layout_width="40dp"
+                android:layout_height="42dp"
+                android:background="?attr/actionModeCloseDrawable"
+                app:backgroundTint="@color/teal_200"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.326" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrarVehiculos"
+    android:background="@drawable/fondo_degradado">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="Añadir un vehículo"
+        android:textColor="#fff"
+        android:textSize="27sp"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tviewRegistrarseVehiculo"
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tviewRegistrarseVehiculo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:fontFamily="@font/roboto_regular"
+        android:width="330dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:text="Esto permitirá que el vehículo reserve una bahía para su uso en un periodo de tiempo especificado y que este sea reconocido por las bahías."
+        android:id="@+id/tviewAlRegistrarteV"
+        />
+
+    <TextView
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@id/tviewAlRegistrarteV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/teal_200"
+        android:textSize="18sp"
+        android:text="Cuentanos sobre el vehículo"
+        android:id="@+id/tviewCuentanos"
+        />
+
+    <LinearLayout
+        android:layout_below="@id/tviewCuentanos"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:id="@+id/rlayoutTipo">
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:text="¿Qué tipo de vehículo es?"
+            />
+
+        <Spinner
+            android:layout_marginLeft="15dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/array_vehiculos"
+            android:background="#fff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/rlayoutTipo"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:id="@+id/rlayoutTipos">
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="#fff"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:text="Nombre para el vehículo"
+            />
+
+        <EditText
+            android:layout_marginLeft="15dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Mi vehículo"
+            android:textColorHint="#fff"
+            android:textColor="#fff"
+            android:paddingLeft="10dp"
+            android:id="@+id/etextNombreVehiculo"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="#fff"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:text="¿Qué tipo de carga suele portar?"
+            />
+
+        <EditText
+            android:layout_marginLeft="15dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Tipo"
+            android:textColorHint="#fff"
+            android:textColor="#fff"
+            android:paddingLeft="10dp"
+            android:id="@+id/etextTipoCarga"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="#fff"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:text="Código RFID del vehículo"
+            />
+
+        <EditText
+            android:layout_marginLeft="15dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Código"
+            android:textColorHint="#fff"
+            android:textColor="#fff"
+            android:paddingLeft="10dp"
+            android:id="@+id/etextRFIDVehiculo"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlayoutTipos"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="15dp"
+        android:text="¿Como puedo conocer este dato?"
+        android:textColor="@color/teal_200"
+        android:id="@+id/tviewConocerRFID"/>
+
+    <TextView
+        android:layout_below="@+id/tviewConocerRFID"
+        android:layout_marginTop="25dp"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:text="¡AVISO!. Al registrar el vehículo, este se asociará con su identidad de usuario dentro de Road Tag. Usted, ahora podrá reservar bahías para este vehículo y será reconocido como el responsable porque el vehículo use la reserva en forma adecuada en el tiempo adecuado."
+        android:id="@+id/tviewAviso"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_below="@id/tviewAviso"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnSalirVehiculo"
+            android:layout_width="40dp"
+            android:layout_height="42dp"
+            android:background="?attr/actionModeCloseDrawable"
+            app:backgroundTint="@color/teal_200"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.212"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_200"
+            android:text="Registrar"
+            app:layout_constraintBottom_toBottomOf="@+id/btnSalirVehiculo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.616"
+            app:layout_constraintStart_toEndOf="@+id/btnSalirVehiculo"
+            app:layout_constraintTop_toTopOf="@+id/btnSalirVehiculo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Regresar"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/btnSalirVehiculo"
+            app:layout_constraintHorizontal_bias="0.363"
+            app:layout_constraintStart_toStartOf="@+id/btnSalirVehiculo"
+            app:layout_constraintTop_toBottomOf="@+id/btnSalirVehiculo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IniciarORegistrarse">
+
+    <TextView
+        android:id="@+id/tviewIniciarSesion"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Inicio de sesión Road Tag"
+        android:textAlignment="center"
+        android:textColor="@color/teal_200"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <TextView
+        android:id="@+id/tviewIniciarEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="512dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="Su correo email"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tviewIniciarSesion"
+        app:layout_constraintStart_toStartOf="@+id/tviewIniciarSesion" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/fondo_formulario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tviewIniciarEmail"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/tviewIniciarEmail"
+        app:layout_constraintTop_toBottomOf="@+id/tviewIniciarEmail"
+        app:layout_constraintVertical_bias="0.034"
+        android:fontFamily="@font/roboto_regular"
+        android:id="@+id/etextEmailIniciar"/>
+
+    <TextView
+        android:id="@+id/tviewIniciarContrasenia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="Su contraseña"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/etextEmailIniciar"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/etextEmailIniciar"
+        app:layout_constraintTop_toBottomOf="@+id/etextEmailIniciar" />
+
+    <EditText
+        android:id="@+id/etextContraseniaIniciar"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/fondo_formulario"
+        app:layout_constraintEnd_toEndOf="@+id/tviewIniciarContrasenia"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/tviewIniciarContrasenia"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintTop_toBottomOf="@+id/tviewIniciarContrasenia"
+        />
+
+    <CheckBox
+        android:id="@+id/cboxRecordarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="recordarme"
+        android:textColor="@color/teal_700"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/etextContraseniaIniciar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etextContraseniaIniciar"
+        app:layout_constraintTop_toBottomOf="@+id/etextContraseniaIniciar" />
+
+    <Button
+        android:id="@+id/btnIniciarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="Iniciar sesión"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="@+id/etextContraseniaIniciar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/etextContraseniaIniciar"
+        app:layout_constraintTop_toBottomOf="@+id/etextContraseniaIniciar" />
+
+    <Button
+        android:id="@+id/btnRegistrarme"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:text="Registrarme en road tag"
+        android:textColor="@color/teal_700"
+        app:layout_constraintEnd_toEndOf="@+id/btnIniciarSesion"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cboxRecordarSesion"
+        app:layout_constraintTop_toBottomOf="@+id/cboxRecordarSesion" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

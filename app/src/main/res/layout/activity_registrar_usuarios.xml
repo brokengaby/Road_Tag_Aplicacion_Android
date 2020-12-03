@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrarUsuarios"
+    android:background="@drawable/fondo_degradado">
+
+    <TextView
+        android:id="@+id/tviewRegistrarse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="Registrarse pyme"
+        android:textColor="#fff"
+        android:textSize="27sp" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tviewRegistrarse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:fontFamily="@font/roboto_regular"
+        android:width="330dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:text="Al registrarte como un empleado de los vehículos de carga y descarga podrás conocer en tiempo real la ubicación de las bahías de descarga y su localización en el mapa, asi como acceder a reservarlas, entre otras funciones."
+        android:id="@+id/tviewAlRegistrarte"
+        />
+
+    <LinearLayout
+        android:layout_below="@id/tviewAlRegistrarte"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rlayoutDatos">
+
+        <EditText
+            android:id="@+id/etextNombre"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="Nombre"
+            android:paddingLeft="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:inputType="textPersonName"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etextApellido"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="Apellido"
+            android:paddingLeft="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:inputType="textPersonName"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etextEmail"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="Email"
+            android:paddingLeft="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:inputType="textEmailAddress"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etextContrasenia"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="Contraseña"
+            android:paddingLeft="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:inputType="textPassword"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etextContraseniaC"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="Confirme contraseña"
+            android:paddingLeft="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:textSize="18sp"
+            android:inputType="textPassword"/>
+
+        <TextView
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Empresa de procedencia"
+            android:textSize="15sp"
+            android:textColor="#fff"/>
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/sEmpresas"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlayoutDatos"
+        android:layout_alignStart="@+id/rlayoutDatos"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:background="#fff"
+        android:entries="@array/array_empresas" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sEmpresas"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="21dp"
+        android:text="Acepto los términos y condiciones"
+        android:textColor="@color/teal_200"
+        android:id="@+id/cboxTerminos"/>
+
+    <Button
+        android:id="@+id/btnRegistrarUsuario"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cboxTerminos"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="Registrarme" />
+
+</RelativeLayout>
